@@ -1,0 +1,5 @@
+<h1><%= @post.title %></h1>
+
+<p><em><%= @post.user.email %> | posted <%= @post.created_at %></em></p>
+<p><%= @post.body %></p>
+<%= link_to :Back, root_path %>
