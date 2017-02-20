@@ -1,1 +1,5 @@
-_form.html.erb
+<%= simple_form_for, remote: true @post do |f| %>
+	<%= f.input :title %>
+	<%= f.input :body %>
+	<%= f.submit %>
+<% end %>
