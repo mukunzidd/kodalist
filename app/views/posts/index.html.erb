@@ -1,8 +1,13 @@
-<h1>Recent Posts</h1>
-<p><%= button_to 'New Post', new_post_path, method: :get %></p>
-<% @posts.each do |post| %>
-	<h3><%= link_to post.title, post %></h3>
-	<em>Posted by <%= post.user.email %></em>
-	<p><%= post.body %></p>
-	<hr>
+<div class="w3-container">
+<p><%= button_to 'New Post', new_post_path, method: :get, class: "w3-btn w3-teal" %></p>
+<div class="w3-row">
+	<% @posts.each do |post| %>
+		<div class="w3-card w3-padding">
+			<h3 class="w3-text"><%= link_to post.title, post %></h3>
+			<em>Posted by <%= post.user.email %></em>
+			<p><%= post.body %></p>
+	</div>
+</div>
+
 <% end %>
+</div>

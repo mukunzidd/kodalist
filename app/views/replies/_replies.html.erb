@@ -4,7 +4,7 @@
 	<em>Reply by <%= reply.user.email %> </em> <br> <br>
 
 	<div class="buttons">
-		<%= link_to "Edit", edit_post_reply_path(reply.post, reply) %>
-		<%= link_to "Delete", [reply.post, reply], method: :delete, data: { confirm: "Are you for real?" } %>
+		<%= link_to "Edit", edit_post_reply_path(reply.post, reply), remote: true %>
+		<%= link_to "Delete", [reply.post, reply], method: :delete, remote: true %>
 	</div>
 <% end %>

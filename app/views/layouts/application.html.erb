@@ -4,13 +4,24 @@
     <title>Kodalist</title>
     <%= csrf_meta_tags %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <header class="w3-container w3-teal w3-padding">
+      
+      <ul class="w3-navbar w3-hide-small">
+        <li class="w3-text"><%= link_to 'kodaLIST', root_path %></li>
+        <li class="w3-right"><a href="#">Sign Out <i class="fa fa-sign-out"></i></a></li>
+      </ul>
+
+
+    	<p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </header>
     <%= yield %>
   </body>
 </html>
