@@ -1,4 +1,4 @@
-# kodaList
+# kodaLIST
 _For Developers_
 
 ## What am I building?
@@ -29,4 +29,4 @@ I want to create a presence of programmers in Rwanda. I want to find people who 
 - **_GitHub Profile Finder_** to search github users and repos(with Github API)
 
 ***
-_2017, Project Zee by DoDo._
+_2017, kodaLIST by DoDo._
