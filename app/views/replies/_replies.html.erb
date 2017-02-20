@@ -2,4 +2,9 @@
 <% @post.replies.each do |reply| %>
 	<strong><%= reply.body %></strong> <br>
 	<em>Reply by <%= reply.user.email %> </em> <br> <br>
+
+	<div class="buttons">
+		<%= link_to "Edit", edit_post_reply_path(reply.post, reply) %>
+		<%= link_to "Delete", [reply.post, reply], method: :delete, data: { confirm: "Are you for real?" } %>
+	</div>
 <% end %>

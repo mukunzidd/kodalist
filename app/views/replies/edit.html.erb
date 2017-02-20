@@ -1,2 +1,6 @@
-<p>Editing a Comment</p>
-<%= render 'form' %>
+<h2>Editing a Comment</h2>
+
+<%= simple_form_for([@post, @reply]) do |f|
+ <%=  f.input :body %>
+ <%= f.submit %>
+<% end %>
