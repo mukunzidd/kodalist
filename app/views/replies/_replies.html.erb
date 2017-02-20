@@ -1,0 +1,5 @@
+<h3><%= @post.replies.count %> Replies</h3>
+<% @post.replies.each do |reply| %>
+	<strong><%= reply.body %></strong> <br>
+	<em>Reply by <%= reply.user.email %> </em> <br> <br>
+<% end %>

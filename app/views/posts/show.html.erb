@@ -5,7 +5,12 @@
 <%= link_to :Delete, post_path, method: :delete, remote: true, data: { confirm: 'Are you for real?'} %>
 <%= link_to :Edit, edit_post_path %>
 <hr>
+
+<!-- Post replies -->
+<%= render 'replies/replies' %>
+
+<hr>
 <h3>Post A Reply:</h3>
-<%= render "relies/comments" %>
+<%= render "replies/form" %>
 <br>
 <%= link_to :Back, root_path %>
