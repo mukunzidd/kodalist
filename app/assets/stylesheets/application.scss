@@ -22,8 +22,10 @@ $white: #ffffff;
 $border: #bcc5c8;
 
 // General Styles
-body {
+body, html {
   font-family: 'Raleway', sans-serif;
+  margin: 0;
+  height: 100%;
 }
 h1, h2, h3, h4, h5, h6, p, ul, li {
   color: $black;
@@ -82,6 +84,8 @@ a {
 // Wrappers
 .wrapper {
   padding: 2rem 0;
+  min-height: 100%;
+  margin-bottom: -50px;
 }
 .skinny-wrapper {
   max-width: 760px;
@@ -134,6 +138,7 @@ a {
 .main-footer {
   padding: 2em 5% 3em 5%;
   border-top: 1px solid $border;
+  height: 50px;
   .copyright {
     float: left;
     font-size: .9em;
