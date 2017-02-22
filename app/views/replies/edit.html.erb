@@ -1,6 +1,10 @@
-<h2>Editing a Comment</h2>
+<div class="skynni-wrapper">
+	<div class="reply-wrapper">
+		<h2>Editing a Comment</h2>
 
-<%= simple_form_for([@post, @reply]) do |f| %>
- <%=  f.input :body %>
- <%= f.submit %>
-<% end %>
+		<%= simple_form_for([@post, @reply]) do |f| %>
+		 <%=  f.input :body %>
+		 <%= f.submit %>
+		<% end %>		
+	</div>
+</div>
