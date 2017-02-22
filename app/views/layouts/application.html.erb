@@ -19,15 +19,15 @@
       <nav class="navbar">
         <% if current_user %>
           <%= link_to 'New Thread', new_post_path %>
-          <%= link_to 'Log Out', destroy_user_session_path %>
+          <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
         <% else %>
           <%= link_to 'Sign In', new_user_session_path %>
           <%= link_to 'Sign Up', new_user_registration_path %>
         <% end %>
       </nav>
     </header>
-    	<p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
     <footer class="main-footer">
       <p class="copyright">&copy; 2017 kodaLIST for Developers.</p>
