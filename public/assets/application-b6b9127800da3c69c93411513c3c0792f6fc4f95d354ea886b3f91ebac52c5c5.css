@@ -1,0 +1,1241 @@
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+/* line 14, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 28, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 36, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 50, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 63, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 73, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 82, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 93, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 106, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 116, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 126, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 136, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 145, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 155, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 166, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 174, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 183, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 192, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 200, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 204, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 215, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 224, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 233, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 241, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 253, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 269, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 279, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 290, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 301, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 313, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 324, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 337, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 351, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 360, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 369, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 379, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 389, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 398, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 408, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 421, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 430, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 441, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 449, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 460, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[hidden] {
+  display: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+/* line 13, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 27, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 35, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 49, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 62, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 72, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 81, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 92, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 105, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 115, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 125, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 135, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 144, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 154, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 165, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 173, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 182, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 191, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 199, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 203, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 214, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 223, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 232, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 240, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 252, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 268, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 278, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 289, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 300, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 312, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 323, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 336, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 350, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 397, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 407, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 420, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 429, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 440, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 448, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 459, /home/dodo/actualize/kodalist/app/assets/stylesheets/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 26, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+body, html {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+/* line 31, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  color: #263959;
+}
+
+/* line 34, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+p, li {
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+/* line 38, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+p, li, ul {
+  margin: 0 0 1.6em 0;
+}
+
+/* line 41, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+h1 {
+  font-size: 2.5rem;
+}
+
+/* line 44, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+h2 {
+  font-size: 1.5rem;
+}
+
+/* line 47, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+h3 {
+  font-size: 1.2rem;
+}
+
+/* line 50, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+h4 {
+  font-size: .8rem;
+}
+
+/* line 53, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+a {
+  color: #263959;
+  text-decoration: none;
+}
+/* line 56, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+a:hover {
+  color: #005f6b;
+}
+
+/* line 60, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.date {
+  font-size: .8em;
+  margin-bottom: 1.5em;
+  color: grey;
+}
+
+/* line 65, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.button {
+  color: #005f6b;
+}
+/* line 67, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.button:hover {
+  color: #3AA6A1;
+}
+
+/* line 71, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 76, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 81, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 86, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.wrapper {
+  padding: 2rem 0;
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+/* line 91, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.skinny-wrapper {
+  max-width: 760px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* line 98, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+#navigation {
+  padding: .8em 1.5%;
+  border-bottom: 1px solid #bcc5c8;
+}
+/* line 101, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+#navigation .name {
+  font-weight: 600;
+  font-family: 'Bad script', cursive;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: .725em 1.4rem;
+  border: 1.5px solid #3AA6A1;
+  color: #005f6b;
+  float: left;
+}
+/* line 112, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+#navigation .navbar {
+  float: right;
+  padding-top: 1.5em;
+}
+/* line 115, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+#navigation .navbar a {
+  color: #263959;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-size: 1rem;
+}
+/* line 120, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+#navigation .navbar a:hover {
+  color: #3AA6A1;
+}
+
+/* line 127, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.notice, .alert {
+  text-align: center;
+}
+
+/* line 130, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.notice {
+  color: green;
+}
+
+/* line 133, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.alert {
+  color: crymson;
+}
+
+/* line 139, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.main-footer {
+  padding: 2em 5% 3em 5%;
+  border-top: 1px solid #bcc5c8;
+  height: 50px;
+}
+/* line 143, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.main-footer .copyright {
+  float: left;
+  font-size: .9em;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Raleway', cursive;
+}
+/* line 150, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.main-footer nav {
+  float: right;
+}
+/* line 152, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.main-footer nav a {
+  color: #263959;
+}
+/* line 154, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.main-footer nav a:hover {
+  color: #3AA6A1;
+}
+/* line 158, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+.main-footer nav i {
+  margin-left: 1em;
+  padding: .3em .8;
+  font-size: 1.5em;
+}
+
+/* line 167, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+hr {
+  width: 4em;
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 2px solid #00dffc;
+  margin: 1.5rem 0;
+}
+
+/* line 177, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+input[type="text"], input[type="email"], input[type="email"], textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 3em;
+  border: 2px solid #bcc5c8;
+  padding: .7em;
+  margin: .4em 0 .5em 0;
+  color: #263959;
+}
+
+/* line 186, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+textarea {
+  min-height: 10em;
+}
+
+/* line 189, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+input[type="submit"], button {
+  outline: none;
+  background: transparent;
+  border: 2px solid #bcc5c8;
+  color: #263959;
+  padding: .5em .8em;
+  font-size: 1em;
+  text-align: center;
+}
+/* line 197, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+input[type="submit"]:hover, button:hover {
+  color: #3AA6A1;
+  border: 2px solid #3AA6A1;
+}
+
+/* line 202, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+select {
+  align-content: center;
+  color: #263959;
+  padding: .7em 1em;
+  font-size: 1em;
+  text-align: center;
+  outline: none;
+  background: transparent;
+  border: 2px solid #bcc5c8;
+}
+/* line 211, /home/dodo/actualize/kodalist/app/assets/stylesheets/application.scss */
+select option {
+  color: #263959;
+  padding: 2em;
+  margin: 3em;
+  background: transparent;
+  border: 2px solid #bcc5c8;
+}
