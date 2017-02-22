@@ -7,21 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
   </head>
 
   <body>
-    <header class="w3-container w3-teal w3-padding">
-      
-      <ul class="w3-navbar w3-hide-small">
-        <li class="w3-text"><%= link_to 'kodaLIST', root_path %></li>
-        <li class="w3-right"><a href="#">Sign Out <i class="fa fa-sign-out"></i></a></li>
-      </ul>
-
-
+    <header id="navigation" class="clearfix">
+      <%= link_to 'kodaLIST', root_path, class: "name" %>
+      <nav class="navbar">
+        <% if current_user %>
+          <%= link_to 'New Thread', new_post_path %>
+          <%= link_to 'Log Out', destroy_user_session_path %>
+        <% else %>
+          <%= link_to 'Sign In', new_user_session_path %>
+          <%= link_to 'Sign Up', new_user_registration_path %>
+        <% end %>
+      </nav>
+    </header>
     	<p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    </header>
     <%= yield %>
+    <footer class="main-footer">
+      <p class="copyright">&copy; 2017 kodaLIST for Developers.</p>
+      <nav>
+        <a href="#" target="blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+        <a href="#" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#" target="blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
+      </nav>
+    </footer>
   </body>
 </html>

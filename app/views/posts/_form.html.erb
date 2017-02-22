@@ -1,5 +1,6 @@
 <%= simple_form_for (@post) do |f| %>
 	<%= collection_select(:post, :category_id, Category.all, :id, :name) %>
+	<br> <br>
 	<%= f.input :title %>
 	<%= f.input :body %>
 	<%= f.submit %>

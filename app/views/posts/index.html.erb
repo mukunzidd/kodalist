@@ -1,12 +1,8 @@
-<div class="w3-container">
-<p><%= button_to 'New Post', new_post_path, method: :get, class: "w3-btn w3-teal" %></p>
-<div class="w3-row">
+<div class="skinny-wrapper">
 	<% @posts.each do |post| %>
-		<div class="w3-card w3-padding">
-			<h3 class="w3-text"><%= link_to post.title, post %></h3>
+			<h3 class="home-text"><%= link_to post.title, post %></h3>
 			<em>Posted by <%= post.user.email %></em>
 			<p><%= post.body %></p>
-	</div>
-<% end %>
-</div>
+			<hr>
+	<% end %>
 </div>
