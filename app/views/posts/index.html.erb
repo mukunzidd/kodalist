@@ -1,8 +1,10 @@
-<div class="skinny-wrapper">
-	<% @posts.each do |post| %>
-			<h3 class="home-text"><%= link_to post.title, post %></h3>
-			<em>Posted by <%= post.user.email %></em>
-			<p><%= post.body %></p>
-			<hr>
-	<% end %>
+<div class="wrapper">
+	<div class="skinny-wrapper">
+		<% @posts.each do |post| %>
+				<h3 class="home-text"><%= link_to post.title, post %></h3>
+				<em>Posted by <%= post.user.email %></em>
+				<p><%= post.body %></p>
+				<hr>
+		<% end %>
+	</div>
 </div>

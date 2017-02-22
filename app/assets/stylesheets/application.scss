@@ -22,10 +22,14 @@ $white: #ffffff;
 $border: #bcc5c8;
 
 // General Styles
-body, html {
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
+html {
   height: 100%;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 h1, h2, h3, h4, h5, h6, p, ul, li {
   color: $black;
@@ -86,6 +90,7 @@ a {
   padding: 2rem 0;
   min-height: 100%;
   margin-bottom: 0 auto -50px;
+  flex: 1;
 }
 .skinny-wrapper {
   max-width: 760px;
