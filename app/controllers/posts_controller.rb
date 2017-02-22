@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 	def index
-		@posts = Post.all		
+		@posts = Post.all.order("created_at DESC")
 	end
 
 	def show
@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 	end
 
 	def new
+		@categories = Category.all
 		@post = current_user.posts.build
 	end
 
@@ -22,6 +23,7 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		@categories = Category.all
 	end
 
 	def update
