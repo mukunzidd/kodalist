@@ -4,6 +4,7 @@
 				<h3 class="home-text"><%= link_to post.title, post %></h3>
 				<em>Posted by <%= post.user.email %></em>
 				<p><%= post.body %></p>
+				<p class="date">Posted  <%= time_ago_in_words(post.created_at)%> ago</p>
 				<hr>
 		<% end %>
 	</div>

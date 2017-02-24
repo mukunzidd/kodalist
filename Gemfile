@@ -34,6 +34,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'haml'
 gem 'simple_form'
+gem 'cancancan'
+gem 'pry-rails'
+
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

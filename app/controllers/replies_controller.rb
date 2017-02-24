@@ -1,5 +1,6 @@
 class RepliesController < ApplicationController
 	before_action :find_post
+	before_action :authenticate_user!, only: [:create, :update, :delete]
 	def create
 
 		@reply = @post.replies.create(reply_params)

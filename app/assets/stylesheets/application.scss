@@ -87,7 +87,7 @@ a {
 
 // Wrappers
 .wrapper {
-  padding: 2rem 0;
+  padding: .5rem 0;
   min-height: 83vh;
   margin-bottom: 0 auto -100px;
   flex: 1;
@@ -104,9 +104,9 @@ a {
   border-bottom: 1px solid $border;
   .name {
     font-weight: 600;
-    font-family: 'Bad script', cursive;
+    font-family: 'Barrio', cursive;
     letter-spacing: 3px;
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     padding: .725em 1.4rem;
     border: 1.5px solid $lteal;
@@ -115,7 +115,7 @@ a {
   }
   .navbar {
     float: right;
-    padding-top: 1.5em;
+    padding-top: 1em;
     a {
       color: $black;
       text-decoration: none;
@@ -174,7 +174,7 @@ hr {
   height: 2px;
   border: 0;
   border-top: 2px solid #00dffc;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 // Forms
@@ -214,8 +214,8 @@ select {
   border: 2px solid $border;
   option {
   	color: $black;
-    padding: 2em;
-    margin: 3em;
+    padding: 1.2em;
+    margin: 1.3em;
     background: transparent;
     border: 2px solid $border;
   }
