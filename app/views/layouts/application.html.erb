@@ -33,9 +33,7 @@
     <% if alert %>
       <p class="alert"><%= alert %></p>
     <% end %>
-    <% if current_user %>
-      <p><%= current_user.pseudo %></p>
-    <% end %>
+
     <%= yield %>
     <footer class="main-footer">
       <p class="copyright">&copy; 2017 kodaLIST for Devs by DoDo.</p>
