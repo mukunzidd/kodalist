@@ -20,6 +20,7 @@
         <% if current_user %>
           <%= link_to 'New Thread', new_post_path %>
           <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+          <%= link_to current_user.pseudo, edit_user_registration_path %>
         <% else %>
           <%= link_to 'Sign In', new_user_session_path %>
           <%= link_to 'Sign Up', new_user_registration_path %>
@@ -31,6 +32,9 @@
     <% end %>
     <% if alert %>
       <p class="alert"><%= alert %></p>
+    <% end %>
+    <% if current_user %>
+      <p><%= current_user.pseudo %></p>
     <% end %>
     <%= yield %>
     <footer class="main-footer">
