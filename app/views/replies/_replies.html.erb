@@ -1,7 +1,7 @@
 <h3><%= @post.replies.count %> Replies</h3>
 <% @post.replies.each do |reply| %>
-	<strong><%= reply.body %></strong> <br>
-	<em>Reply by <%= reply.user.email %> </em> <br> <br>
+	<p><%= reply.body %></p>
+	<p><em>Reply by <%= reply.user.first_name %></em></p>	
 
 	<div class="buttons">
 	<% if current_user %>

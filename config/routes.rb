@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   	resources :replies
   end
 
+  get 'profiles/profile'
+
   root 'posts#index'
 end

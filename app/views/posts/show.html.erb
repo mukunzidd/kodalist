@@ -14,8 +14,11 @@
 		<%= render 'replies/replies' %>
 		
 		<hr>
-		<h3>Post A Reply:</h3>
-		<%= render "replies/form" %>
-		<br>
+		<% if current_user %>
+			<h3>Post A Reply:</h3>
+			<%= render "replies/form" %>
+		<% else %>
+			<p>Please <%= link_to 'Sign In', new_user_session_path %> to reply to this thread!</p>
+		<% end -%>
 	</div>
 </div>
