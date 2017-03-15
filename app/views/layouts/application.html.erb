@@ -7,26 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
   </head>
 
   <body>
-    <header id="navigation" class="clearfix">
-      <%= link_to 'kodaLIST', root_path, class: "name" %>
-      <nav class="navbar">
-        <% if current_user %>
-          <%= link_to 'New Thread', new_post_path %>
-          <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-          <%= link_to current_user.pseudo, edit_user_registration_path %>
-        <% else %>
-          <%= link_to 'Sign In', new_user_session_path %>
-          <%= link_to 'Sign Up', new_user_registration_path %>
-        <% end %>
-      </nav>
-    </header>
+    <nav class="nav has-shadow">
+      <div class="container">
+        <div class="nav-left">
+          <a href="/" class="nav-item">
+            <span>K</span>
+            <img src="https://goo.gl/Dsb9Ku" alt="kodaLIST logo">
+            <span>DA   LIST</span>
+          </a>
+          <%= link_to 'Recent', "#", class: "nav-item is-tab is-hidden-mobile" %>
+          <%= link_to 'Top Rated', "#", class: "nav-item is-tab is-hidden-mobile" %>
+          <%= link_to 'My Favorites', "#", class: "nav-item is-tab is-hidden-mobile" %>
+        </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+
+      <% if current_user %>
+
+          <div class="nav-right nav-menu">
+            <a class="nav-item is-tab">
+              <figure class="image is-16x16" style="margin-right: 8px;">
+                <img src="http://bulma.io/images/jgthms.png">
+              </figure>
+              Profile
+            </a>
+            <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-item is-tab" %>
+          </div>
+        </div>
+
+      <% else %>
+
+        <%= link_to 'Sign In', new_user_session_path, class: "nav-item is-tab" %>
+        <span class="nav-item">
+          <%= link_to 'Sign Up', new_user_registration_path, class: "button is-primary is-tab" %>
+        </span>
+
+      <% end -%>
+    </nav>
+
     <% if notice %>
      <p class="notice"><%= notice %></p>
     <% end %>
@@ -35,8 +60,8 @@
     <% end %>
 
     <%= yield %>
-    <footer class="main-footer">
-      <p class="copyright">&copy; 2017 kodaLIST for Devs by DoDo.</p>
+    <footer class="footer">
+      <p class="copyright">&copy; 2017 kodaLIST for Developers by <%= link_to 'DoDo', "https://mukunzidd.github.io", target: "_blank" %>.</p>
       <nav>
         <a href="https://github.com/kodalist" target="blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
         <a href="https://twitter.com/kodaLISTed" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>

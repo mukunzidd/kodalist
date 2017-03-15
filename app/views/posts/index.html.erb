@@ -1,10 +1,42 @@
-<div class="">
-	<div class="skinny-wrapper">
-		<% @posts.each do |post| %>
-				<h3 class="home-text"><%= link_to post.title, post %></h3>
-				<p><%= truncate post.body, length: 100 %> | <%= link_to 'Read More', post %></p>
-				<p class="date">Posted by <%= post.user.first_name %> <%= time_ago_in_words(post.created_at)%> ago</p>
-				<hr>
-		<% end %>
+<div class="container is-clearfix">
+	<div class=" nav wrapper">
+		<!-- Filters -->
+		<div class="nav-left">
+      <%= link_to 'Recent', "#", class: "nav-item is-tab is-hidden-mobile" %>
+      <%= link_to 'Top Rated', "#", class: "nav-item is-tab is-hidden-mobile" %>
+      <%= link_to 'My Favorites', "#", class: "nav-item is-tab is-hidden-mobile" %>
+    </div>
+
+		<!-- Search -->
+		<p class="control center has-icon has-icon-left has-addons">
+		  <input class="input" type="text" placeholder="Find a post...">
+		  <span class="icon is-small">
+	    <i class="fa fa-search"></i>
+	  	</span>
+		  <a class="button is-primary">
+		    Search
+		  </a>
+		</p>
 	</div>
+
+	<!-- All Posts -->
+	<% @posts.each do |post| %>
+		<nav class="panel">
+		  <p class="panel-heading">
+		    <strong><%= link_to post.title, post %></strong>
+		  </p>
+		  <div class="panel-block">
+		  <p>
+		    <strong><%= link_to post.title, post %> | </strong> <small>@<%= post.user.email %></small> <small><%= time_ago_in_words(post.created_at)%> ago.</small>
+		    <br>
+		    <span><%= truncate post.body, length: 100 %></span>
+		  </p>
+		  <br>
+  		</div>
+  		<div class="panel-block">
+		    <%= link_to 'Read More', post %>
+		  </div>
+		</nav>
+	<% end %>
 </div>
+
