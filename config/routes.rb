@@ -14,5 +14,8 @@ Rails.application.routes.draw do
 	resources :personal_messages, only: [:new, :create]
 	resources :conversations, only: [:index, :show]
 
+	# Chatroomsm stuff
+	resources :chat_rooms, only: [:new, :create, :show, :index]
+
   root 'posts#index'
 end

@@ -8,7 +8,8 @@ class User < ApplicationRecord
   has_many :authored_conversations, class_name: 'Conversation', foreign_key: 'author_id'
 	has_many :received_conversations, class_name: 'Conversation', foreign_key: 'received_id'
 	has_many :personal_messages, dependent: :destroy
-	has_many :chatrooms, dependent: :destroy	
+	has_many :chat_rooms, dependent: :destroy
+	has_many :chat_messages, dependent: :destroy	
 
   def username
     email.split('@')[0].capitalize
