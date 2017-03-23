@@ -2,8 +2,7 @@
 
 <%= form_for @personal_message do |f| %>
   <%= hidden_field_tag 'receiver_id', @receiver.id %>
-	<p class="emoji-picker-container">
-    <%= f.text_area :body, class: 'form-control', data: { emojiable: true } %>
+    <%= f.text_area :body, class: "form-control" %>
 	</p>
 
   <%= f.submit %>
