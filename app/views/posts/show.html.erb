@@ -1,24 +1,22 @@
-<div class="wrapper">
-	<div class="skinny-wrapper">
-		<h1><%= @post.title %></h1>
+<div class="container">
+	<h1><%= @post.title %></h1>
 
-		<p><em><%= @post.user.email %> | posted <%= time_ago_in_words(@post.created_at)%> ago</em></p>
-		<p><%= @post.body %></p>
-		<% if current_user %>
-			<%= link_to :Delete, post_path, method: :delete, remote: true, data: { confirm: 'Are you for real?'} %>
-			<%= link_to :Edit, edit_post_path %>
-		<% end %>
-		<hr>
+	<p><em><%= @post.user.email %> | posted <%= time_ago_in_words(@post.created_at)%> ago</em></p>
+	<p><%= @post.body %></p>
+	<% if current_user %>
+		<%= link_to :Delete, post_path, method: :delete, remote: true, data: { confirm: 'Are you for real?'} %>
+		<%= link_to :Edit, edit_post_path %>
+	<% end %>
+	<hr>
 
-		<!-- Post replies -->
-		<%= render 'replies/replies' %>
-		
-		<hr>
-		<% if current_user %>
-			<h3>Post A Reply:</h3>
-			<%= render "replies/form" %>
-		<% else %>
-			<p>Please <%= link_to 'Sign In', new_user_session_path %> to reply to this thread!</p>
-		<% end -%>
-	</div>
+	<!-- Post replies -->
+	<%= render 'replies/replies' %>
+	
+	<hr>
+	<% if current_user %>
+		<h3>Post A Reply:</h3>
+		<%= render "replies/form" %>
+	<% else %>
+		<p>Please <%= link_to 'Sign In', new_user_session_path %> to reply to this thread!</p>
+	<% end -%>
 </div>

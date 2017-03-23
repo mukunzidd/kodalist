@@ -5,5 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts
   has_many :replies
-  has_one :status
+  has_many :authored_conversations, class_name: 'Conversation', foreign_key: 'author_id'
+	has_many :received_conversations, class_name: 'Conversation', foreign_key: 'received_id'
+	has_many :personal_messages, dependent: :destroy
+
+  def username
+    email.split('@')[0].capitalize
+  end
 end	

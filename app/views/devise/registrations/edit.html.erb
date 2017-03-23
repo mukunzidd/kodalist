@@ -1,16 +1,16 @@
-<div class="wrapper">
-  <div class="skinny-wrapper">
+<div class="container">
   <h2><%= resource_name.to_s.humanize %> Account Settings</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
+    <div class="form-group">
 
-    <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true %>
-      <%= f.input :first_name, required: true %>
-      <%= f.input :last_name, required: true %>
-      <%= f.input :bio, required: false %>
-      <%= f.input :pseudo, required: true, unique: true %>
+      <%= f.input :email, required: true, autofocus: true, class: "form-control" %>
+      <%= f.input :first_name, required: true, class: "form-control" %>
+      <%= f.input :last_name, required: true, class: "form-control" %>
+      <%= f.label :Bio %>
+      <%= f.text_area :bio, required: false, class: "form-control" %>
+      <%= f.input :pseudo, required: true, unique: true, class: "form-control" %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -20,9 +20,7 @@
       <hr>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Update" %>
-    </div>
+    <%= f.button :submit, "Update" %>
     <% end %>
 
     <h3>Cancel my account</h3>
@@ -31,5 +29,4 @@
 
     <%= link_to "Back", :back %>
     
-  </div>
 </div>

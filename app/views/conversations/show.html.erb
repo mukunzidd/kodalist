@@ -1,0 +1,16 @@
+<h1>Chatting with <%= @conversation.with(current_user).username %></h1>
+
+<div id="conversation-main">
+  <div id="conversation-body">
+    <%= render @conversation.personal_messages %>
+  </div>
+
+  <%= form_for @personal_message do |f| %>
+    <%= hidden_field_tag 'conversation_id', @conversation.id %>
+    <p class="emoji-picker-container">
+		    <%= f.text_area :body, class: 'form-control' data: { emojiable: true } %>
+		</p>
+
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -36,7 +36,9 @@ gem 'haml'
 gem 'simple_form'
 gem 'cancancan'
 gem 'pry-rails'
-
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'rails_emoji_picker'
+# gem 'rails-assets-tether', '>= 1.3.3'
 
 
 

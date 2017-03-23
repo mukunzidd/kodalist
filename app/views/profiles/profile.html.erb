@@ -1,3 +1,4 @@
 <div class="skinny-wrapper">
-	<h1><%= @user.first_name %>'s Profile</h1>
+	<h1><%= current_user.first_name if current_user %>'s Profile</h1>
+
 </div>

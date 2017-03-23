@@ -11,47 +11,10 @@
   </head>
 
   <body>
-    <nav class="nav has-shadow">
-      <div class="container">
-        <div class="nav-left">
-          <a href="/" class="nav-item">
-            <span>K</span>
-            <img src="https://goo.gl/Dsb9Ku" alt="kodaLIST logo">
-            <span>DA   LIST</span>
-          </a>
-          <%= link_to 'Recent', "#", class: "nav-item is-tab is-hidden-mobile" %>
-          <%= link_to 'Top Rated', "#", class: "nav-item is-tab is-hidden-mobile" %>
-          <%= link_to 'My Favorites', "#", class: "nav-item is-tab is-hidden-mobile" %>
-        </div>
-        <span class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
 
-      <% if current_user %>
+  <%= render 'shared/menu' %>
 
-          <div class="nav-right nav-menu">
-            <a class="nav-item is-tab">
-              <figure class="image is-16x16" style="margin-right: 8px;">
-                <img src="http://bulma.io/images/jgthms.png">
-              </figure>
-              Profile
-            </a>
-            <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-item is-tab" %>
-          </div>
-        </div>
-
-      <% else %>
-
-        <%= link_to 'Sign In', new_user_session_path, class: "nav-item is-tab" %>
-        <span class="nav-item">
-          <%= link_to 'Sign Up', new_user_registration_path, class: "button is-primary is-tab" %>
-        </span>
-
-      <% end -%>
-    </nav>
-
+  <!-- Flash Messages -->
     <% if notice %>
      <p class="notice"><%= notice %></p>
     <% end %>
