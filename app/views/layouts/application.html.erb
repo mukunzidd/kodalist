@@ -22,7 +22,10 @@
       <p class="alert"><%= alert %></p>
     <% end %>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    
     <footer class="footer">
       <p class="copyright">&copy; 2017 kodaLIST for Developers by <%= link_to 'DoDo', "https://mukunzidd.github.io", target: "_blank" %>.</p>
       <nav>

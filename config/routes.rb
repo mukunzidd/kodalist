@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'users/index'
 
   devise_for :users, controllers: { registrations: 'user_info' }
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   	resources :replies
   end
 
+  #Take care of this
   get '/profile', to: "profiles#profile"
 
   # Messaging routes
@@ -16,6 +18,9 @@ Rails.application.routes.draw do
 
 	# Chatroomsm stuff
 	resources :chat_rooms, only: [:new, :create, :show, :index]
+
+	# Action Cable
+	mount ActionCable.server => '/cable'
 
   root 'posts#index'
 end

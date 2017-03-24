@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require cable
 //= require bootstrap
 //= require turbolinks
 //= require conversations
 //= require_tree .
+
