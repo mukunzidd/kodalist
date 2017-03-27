@@ -1,6 +1,6 @@
 <%= simple_form_for ([@post, @post.replies.build]), :html=>{:id=>"reply_form",:multipart => true,:remote=>true} do |f| %>
 
 	<%= f.input :body, label: false %>
-	<%= f.submit %>
+	<%= f.submit, :submit, class: "btn"  %>
 
 <% end %>	

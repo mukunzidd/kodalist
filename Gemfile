@@ -39,7 +39,7 @@ gem 'simple_form'
 gem 'cancancan'
 gem 'pry-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'devise-bootstrapped', '~> 0.1.1'
+# gem 'devise-bootstrapped', '~> 0.1.1'
 # gem 'rails_emoji_picker'
 
 # Use Capistrano for deployment

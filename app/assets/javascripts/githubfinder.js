@@ -16,7 +16,7 @@ $(document).ready(function(){
           client_id:'f144d5129988cf2824f6',
           client_secret:'b5c21045f7e3a549f0f576805f296a8a5b9d3473',
           sort: 'created: asc',
-          per_page: 5
+          per_page: 10
         }
       }).done(function(repos){
         $.each(repos, function(index, repo){
