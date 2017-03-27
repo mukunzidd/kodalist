@@ -1,25 +1,30 @@
-<div class="container">
-		<!-- Filters -->
-		<div class="mt-2">
-      <%= button_to 'New Post', new_post_path, method: :get %>
-    </div>
+	<div class="container">
+	<!-- Filters -->
+	<%= render 'sidebar' %>
 
 	<!-- All Posts -->
-
-	<% @posts.each do |post| %>
-		<div class="card m-5">
-		  <div class="card-block">
-		    <h4 class="card-title"><%= link_to post.title, post %></h4>
-		    <p class="card-text"><%= truncate post.body, length: 50 %></p>
-		    <br>
-
-		    <a href="<%= post_path(post) %>" class="btn btn-info">Read More</a>
-
-		  </div>
-		    <div class="card-footer text-muted">
-			    Posted by @<%= post.user.username %>, <%= time_ago_in_words(post.created_at)%> ago.
-			  </div>
+	<div class="col-sm-9">
+		<% unless user_signed_in? %>
+		<div class="alert alert-info">
+			<p><strong><a href="/users/sign_up"> Sign Up to kodaLIST </a></strong> to join the conversation. Ask questions about your code, get help adding a new feature, and get into the discussion with other kodaLISTed people around Kigali.</p>
 		</div>
-	<% end %>
+		<% end %>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-2">
+						<img class="img-responsive" src="https://secure.gravatar.com/avatar/88b3de5f8204fa20457b1def81848368.png?default=mm&filetype=png&secure=true&size=40" alt="Gravatar" width="100" height="100%" />
+					</div>
+					<% @posts.each do |post| %>
+						<div class="col-md-10">
+							<h4 class=""><%= link_to post.title, post %></h4>
+							<p class=""><%= truncate post.body, length: 50 %></p>
+							<br>
+							<hr>
+							<span>Posted by @<%= post.user.username %>, <%= time_ago_in_words(post.created_at).upcase%> AGO.</span> <span><a href="<%= post_path(post) %>" class="btn btn-info pull-right">Read More</a></span>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
 </div>
-

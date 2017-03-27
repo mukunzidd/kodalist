@@ -1,9 +1,10 @@
+<%= render 'sidebar' %>
 <div class="container">
 	<h1><%= @post.title %></h1>
 
 	<p><em><%= @post.user.email %> | posted <%= time_ago_in_words(@post.created_at)%> ago</em></p>
 	<p><%= @post.body %></p>
-	<% if current_user %>
+	<% if @post.user == current_user %>
 		<%= link_to :Delete, post_path, method: :delete, remote: true, data: { confirm: 'Are you for real?'} %>
 		<%= link_to :Edit, edit_post_path %>
 	<% end %>

@@ -39,6 +39,7 @@ gem 'simple_form'
 gem 'cancancan'
 gem 'pry-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+# gem 'acts_as_votable', '~> 0.10.0'
 # gem 'devise-bootstrapped', '~> 0.1.1'
 # gem 'rails_emoji_picker'
 

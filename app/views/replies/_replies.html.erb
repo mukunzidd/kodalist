@@ -4,7 +4,7 @@
 	<p><em>Reply by <%= reply.user.first_name %></em></p>	
 
 	<div class="buttons">
-	<% if current_user %>
+	<% if reply.post.user = current_user %>
 		<%= link_to "Edit", edit_post_reply_path(reply.post, reply), remote: true %>
 		<%= link_to "Delete", [reply.post, reply], method: :delete, remote: true %>
 	<% end %>
