@@ -9,6 +9,6 @@ class ChatMessageBroadcastJob < ApplicationJob
   private
 
   def render_chat_message(chat_message)
-    ChatMessagesController.render @chat_room.chat_messages, locals: {chat_message: chat_message}
+    ChatMessagesController.render(chat_message), locals: {chat_message: chat_message}
   end
 end

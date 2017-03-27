@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'finder', to: 'githubfinder#index'
+
   get 'users/index'
 
   devise_for :users, controllers: { registrations: 'user_info' }

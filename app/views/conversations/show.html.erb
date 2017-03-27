@@ -6,7 +6,7 @@
 	    <%= render @conversation.personal_messages %>
 	  </div>
 
-	  <%= form_for @personal_message do |f| %>
+	  <%= form_for @personal_message, remote: true do |f| %>
 	    <%= hidden_field_tag 'conversation_id', @conversation.id %>
 	    <div class="form-group">
 		    <%= f.text_area :body, class: "form-control" %>
