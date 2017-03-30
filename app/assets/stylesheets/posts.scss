@@ -8,12 +8,23 @@ $lteal: #3AA6A1;
 
 .threads {
 	border-radius: 3px;
-	padding: 15px;
+	padding: 5px;
 	background-color: white;
+	a {
+		text-decoration: none;
+		color: $black;
+		font-weight: 400;
+		line-height: 1px;
+		&:hover {
+			color: $lteal;
+			font-weight: 200;
+			font-size: 1em;
+			text-decoration: none;
+		}
 	.user-section {
 		display: inline-block;
 		float: left;
-		margin: 2em;
+		margin: 0 auto;
 		img {
 			margin-top: 0;
 			height: 59px;
@@ -42,16 +53,5 @@ $lteal: #3AA6A1;
 	hr {
 		clear: both;
 	}
-}
-
-a {
-	text-decoration: none;
-	color: $black;
-	font-weight: 600;
-	&:hover {
-		color: $lteal;
-		font-weight: 200;
-		font-size: 1em;
-		line-height: 1px;
 	}
 }

@@ -20,6 +20,8 @@
 		<h3>Post A Reply:</h3>
 		<%= render "replies/form" %>
 	<% else %>
-		<p>Please <%= link_to 'Sign In', new_user_session_path %> to reply to this thread!</p>
+		<div class="w3-card w3-padding w3-padding w3-center">
+			<p>Please <%= link_to 'Sign In', new_user_session_path, class: "btn button" %> to reply to this thread!</p>
+		</div>
 	<% end %>
 </div>

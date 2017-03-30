@@ -1,41 +1,43 @@
 	<div class="container">
-	<!-- Filters -->
-	<%= render 'sidebar' %>
+		<!-- Filters -->
+		<%= render 'sidebar' %>
 
-	<!-- All Posts -->
-	<div class="col-sm-8">
-		<% unless user_signed_in? %>
-		<div class="alert alert-info">
-			<p><strong><a href="/users/sign_up"> Sign Up to kodaLIST </a></strong> to join the conversation. Ask questions about your code, get help adding a new feature, and get into the discussion with other kodaLISTed people around Kigali.</p>
-		</div>
-		<% end %>
-
-	<div class="threads">
-		<div class="thread">
-			<% @posts.each do |post| %>
-					<div class="user-section">
-						<img class="home-avatar" src="https://secure.gravatar.com/avatar/eb144a0c2406f38310d281fe22886b95.png?default=mm&filetype=png&secure=true&size=40" alt="Gravatar" width="59" height="59" />
-					</div>
-					<div class="thread-details">
-						<h4><%= link_to post.title, post_path(post) %></h4>
-						<div class="about-thread">
-							<strong><a style="color: teal" href="#"><%= post.category.name.upcase %></a></strong>• POSTED <%= time_ago_in_words(post.created_at).upcase%> AGO BY <%= link_to post.user.pseudo.upcase if post.user.pseudo %>
-						</div>
-					</div>
-					<div class="thread-posts-count lead" href="<%= post_path(post) %>">
-						<span><%= 1 + post.replies.count %></span>
-
-						<small>
-						<% if post.replies.count > 1 %>
-							posts
-						<% else %>
-							post		
-						<% end %>	
-						</small>
-					</div>
-					<hr>
-				<% end %>
+		<!-- All Posts -->
+		<div class="col-sm-8">
+			<% unless user_signed_in? %>
+			<div class="alert alert-info">
+				<p><strong><a href="/users/sign_up"> Sign Up to kodaLIST </a></strong> to join the conversation. Ask questions about your code, get help adding a new feature, and get into the discussion with other kodaLISTed people around Kigali.</p>
 			</div>
+			<% end %>
+
+			<!-- <div class="threads"> -->
+			<!-- <div class="thread"> -->
+			<% @posts.each do |post| %>
+			<div class="w3-card threads w3-margin w3-white w3-border-left-4" >
+
+				<header class="w3-container w3-beige w3-shadow">
+					<h1><%= link_to post.title, post_path(post) %></h1>
+				</header>
+
+				<div class="w3-container">
+					<div>
+						<p><%= post.category.name.upcase %></a></strong> • POSTED <%= time_ago_in_words(post.created_at).upcase%> AGO BY <span class=""><%= link_to post.user.pseudo.upcase, users_path if post.user.pseudo %></span> •  
+						<strong>
+							<%= 1 + post.replies.count %>
+
+							<% if post.replies.count > 1 %>
+							posts
+							<% else %>
+							post		
+							<% end %>	
+						</strong>
+						</p>
+					</div>
+				</div>
+				<br>
+			</div>
+				<% end %>
 		</div>
 	</div>
 </div>
+

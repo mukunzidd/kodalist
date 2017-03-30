@@ -27,6 +27,7 @@ $border: #bcc5c8;
 	background-color: $white;
 }
 
+
 body {
   box-sizing: border-box;
   background-color: #f0f0f0;
@@ -97,6 +98,22 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   min-height: 83vh;
   margin-bottom: 0 auto -100px;
   flex: 1;
+}
+
+.navicons {
+  display: flex;
+  text-align: center;
+  line-height: 1rem;
+  align-content: center;
+  .fa {
+    font-size: 2em;
+    padding-bottom: 2px;
+  }
+  .navimg {
+    width: 2rem;
+    margin-bottom: 3px;
+}
+
 }
 // .skinny-wrapper {
 //   max-width: 760px;
