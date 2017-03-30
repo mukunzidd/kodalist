@@ -1,5 +1,5 @@
-<div>
-  Chatting with <%= conversation.with(current_user).username %>
+<div class="w3-card" data-id="<%= conversation.id %>">
+  <li><%= conversation.with(current_user).username %></li> 
   <br>
   <em><%= conversation.personal_messages.last.body.truncate(50) if conversation.personal_messages.last %></em>
   <br>

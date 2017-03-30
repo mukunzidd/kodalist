@@ -1,7 +1,7 @@
-<%= simple_form_for ([@post, @post.replies.build]), :html=>{:id=>"reply_form",:multipart => true,:remote=>true} do |f| %>
+<%= simple_form_for ([@post, @post.replies.build]), class: "form-inline", :html=>{:id=>"reply_form",:multipart => true,:remote=>true} do |f| %>
 	<div class="form-group">
 		<%= f.input :body, label: false %>
 	</div>
-	<%= f.submit "Post a reply", class: "btn" %>
+	<%= f.submit "Post a reply", class: "btn button" %>
 
 <% end %>	

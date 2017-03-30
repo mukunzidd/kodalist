@@ -1,0 +1,57 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$black:#263959;
+$lteal: #3AA6A1;
+
+
+
+.threads {
+	border-radius: 3px;
+	padding: 15px;
+	background-color: white;
+	.user-section {
+		display: inline-block;
+		float: left;
+		margin: 2em;
+		img {
+			margin-top: 0;
+			height: 59px;
+		}
+	}
+	h4 {
+		float: left;
+		font-size: 1.25em;
+	}
+	.thread-details {
+		display: flex;
+		flex-direction: column;
+		float: left;
+		width: 50rem;
+		margin-top: 27px;
+	}
+	.thread-posts-count {
+		float: right;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 6rem;
+		height: auto;
+		margin-top: 27px;
+	}
+	hr {
+		clear: both;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+	font-weight: 600;
+	&:hover {
+		color: $lteal;
+		font-weight: 200;
+		font-size: 1em;
+		line-height: 1px;
+	}
+}

@@ -17,20 +17,25 @@
         <div class="col-md-3"></div> 
         <div class="col-md-6">
           <ul class="nav navbar-nav">
-            <li><a href="<%= root_path %>">Forum</a></li>
-            <li><a href="<%= finder_path %>">Search Github</a></li>
-            <li><a href="<%= conversations_path %>">Talk</a></li>
+            <li><a href="<%= root_path %>"><i class="fa fa-comments-o"></i><img src="<%= image_url("forum.png") %>" alt=""></span>  <br> FORUM</a></li>
+            <% if user_signed_in? %>
+              <li><a href="<%= finder_path %>"> <i class="fa fa-github"></i><img src="<%= image_url("search.png") %>" alt=""></span>  <br><small>GitHub</small>FINDER</a></li>
+              <li><a href="<%= conversations_path %>"><span><img src="<%= image_url("empty-message.png") %>" alt=""></span> <br>MESSAGES</a></li>
+            <% end %>
           </ul>
         </div> 
         <div>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
                 <li class="dropdown">
-                  <i class="fa fa-user-circle-o"></i>
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.username %>  <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-o"></i><%= current_user.username %>  <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                         <li class="nav-item">
-                          <%= link_to 'Account Settings', edit_user_registration_path, class: "nav-link" %>
+                         <span><i class="fa fa-cog"></i>    <%= link_to 'Account Settings', edit_user_registration_path, class: "nav-link" %></span>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav-item">
+                          <%= link_to 'Profile', class: "nav-link" %>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li class="nav-item">
@@ -38,10 +43,10 @@
                         </li>
                       <% else %>
                         <li class="nav-item">
-                          <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
+                          <%= link_to 'Sign In', new_user_session_path, class: "nav-link btn" %>
                         </li>
                         <li class="nav-item">
-                          <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link", method: :get %>
+                          <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link btn btn-default", method: :get %>
                         </li>
                 </ul>
               </li>

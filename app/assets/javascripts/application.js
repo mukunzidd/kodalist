@@ -17,4 +17,3 @@
 //= require turbolinks
 //= require conversations
 //= require_tree .
-

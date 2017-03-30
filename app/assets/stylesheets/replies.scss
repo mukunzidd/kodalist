@@ -1,0 +1,24 @@
+// Place all the styles related to the replies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$black:#263959;
+$teal: #005f6b;
+$lteal: #3AA6A1;
+$white: #fafafa;
+$border: #bcc5c8;
+.reply {
+	.post-content {
+		border-radius: 2%;
+		padding: 25px;
+		font-size: 1.25em;
+		background-color: $white;
+	}
+	.reply-details {
+		.contain {
+			margin: 10px 0;
+			background-color: rgba(250,252,255,.8);			
+			border-left: 6px solid #58C9B9;
+			padding: 15px;
+		}
+		}
+}

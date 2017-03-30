@@ -1,12 +1,5 @@
-<h3><%= @post.replies.count %> Replies</h3>
-<% @post.replies.each do |reply| %>
-	<p><%= reply.body %></p>
-	<p><em>Reply by <%= reply.user.first_name %></em></p>	
-
-	<div class="buttons">
-	<% if reply.post.user = current_user %>
-		<%= link_to "Edit", edit_post_reply_path(reply.post, reply), remote: true %>
-		<%= link_to "Delete", [reply.post, reply], method: :delete, remote: true %>
-	<% end %>
-	</div>
-<% end %>
+<div class="reply-details">
+	<h3><%= @post.replies.count %> Replies</h3>
+	<%= render @post.replies %>	
+	<br>
+</div>

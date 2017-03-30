@@ -1,9 +1,10 @@
 class ConversationsController < ApplicationController
-	before_action :set_conversation, except: [:index]
+	before_action :set_conversation
 	before_action :check_participating!, except: [:index]
 
 	def index
 		@conversations = Conversation.participating(current_user).order('updated_at DESC')
+		@personal_message = PersonalMessage.new
 	end
 
 	def show

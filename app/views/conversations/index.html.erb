@@ -1,8 +1,38 @@
-<div class="container">
-	<h1>Your conversations</h1>
-	<p><em><%= link_to 'Look for people to chat...', users_path %></em></p>
+<div class="w3-row">
+	<div class="w3-col m4 w3-padding">
+		<h1>Your conversations</h1>
+		<p><em><%= link_to 'Look for people to chat...', users_path %></em></p>
+		<!-- <div id="conversations"> -->
+		<% @conversations.each do |conversation| %>
+		  <div class="w3-card" id="<%= conversation.id %>">
+			  <li><%= conversation.with(current_user).username %></li> 
+			  <br>
+			  <em><%= conversation.personal_messages.last.body.truncate(50) if conversation.personal_messages.last %></em>
+			  <br>
+			  <%= link_to 'View conversation', conversation_path(conversation) %>
+			  <hr>
+			</div>
+		<% end -%>
+		<!-- </div> -->
+	</div>
+	<div class="w3-col m6 w3-teal">
+		<% if @conversation %>
+			<h1>Chatting with <%= @conversation.with(current_user).username %></h1>
+			<div id="conversation-main">
+			  <div id="conversation-body">
+			    <%= render @conversation.personal_messages %>
+			  </div>
 
-	<div id="conversations">
-	  <%= render @conversations %>
+			  <%= form_for @personal_message, remote: true do |f| %>
+			    <%= hidden_field_tag 'conversation_id', @conversation.id %>
+			    <div class="form-group">
+				    <%= f.text_area :body, class: "form-control" %>
+				    <%= f.submit 'Send' %>
+			    </div>
+
+			  <% end %>
+			</div>
+		<% end -%>
+		</div>
 	</div>
 </div>

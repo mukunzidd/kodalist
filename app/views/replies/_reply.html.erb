@@ -1,0 +1,11 @@
+<div class="contain">
+	<p><%= reply.body %></p>
+	<p><em>Reply by <%= reply.user.first_name %></em></p>	
+
+	<div class="buttons">
+	<% if reply.user == current_user %>
+		<% link_to "Edit", edit_post_reply_path(reply.post, reply), class: "btn button", remote: true %>
+		<%= link_to "Delete", [reply.post, reply], class: "btn button", method: :delete, remote: true %>
+	<% end %>
+	</div>
+</div>
