@@ -32,7 +32,7 @@ $(document).ready(function(){
                   <span class="label label-success">Stars: ${repo.stargazers_count}</span>
                 </div>
                 <div class="col-md-2">
-                  <a href="${repo.html_url}" target="_blank" class="btn btn-default">Repo Page</a>
+                  <a href="${repo.html_url}" target="_blank" class="btn button">Repo Page</a>
                 </div>
               </div>
             </div>

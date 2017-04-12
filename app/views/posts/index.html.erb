@@ -21,7 +21,7 @@
 
 				<div class="w3-container">
 					<div>
-						<p><%= post.category.name.upcase %></a></strong> • POSTED <%= time_ago_in_words(post.created_at).upcase%> AGO BY <span class=""><%= link_to post.user.pseudo.upcase, users_path if post.user.pseudo %></span> •  
+						<p style="color: teal"><%= post.category.name.upcase %></a></strong> • POSTED <%= time_ago_in_words(post.created_at).upcase%> AGO <span><%= "BY" if post.user.pseudo  %> <%= link_to post.user.pseudo.upcase, users_path if post.user.pseudo %></span> •  
 						<strong>
 							<%= 1 + post.replies.count %>
 
